@@ -11,5 +11,10 @@ module.exports = {
 	plugins: ['stylelint-declaration-block-no-ignored-properties'],
 
 	// 忽略检查的文件或文件夹
-	ignoreFiles: ['node_modules/**/*', 'build/**/*', 'dist/**/*'],
+	ignoreFiles: [
+		'node_modules/**/*',
+		'build/**/*',
+		'dist/**/*',
+		'src/**/*.less',
+	],
 }

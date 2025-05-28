@@ -5,12 +5,21 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc -b && vite build"
+		"build": "tsc -b && vite build",
+		"preview": "vite build &&  vite preview"
 	},
 	"dependencies": {
+		"@ant-design/icons": "5.x",
+		"antd": "^5.25.2",
+		"axios": "^1.9.0",
+		"classnames": "^2.5.1",
 		"cross-env": "^7.0.3",
+		"less": "^4.3.0",
+		"mobx": "^6.13.7",
+		"mobx-react": "^9.2.0",
 		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react-dom": "^18.3.1",
+		"react-router-dom": "^7.6.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "19.2.0",
@@ -40,12 +49,6 @@
 	"lint-staged": {
 		"*.{ts,tsx,js}": [
 			"eslint --config .eslintrc.cjs"
-		],
-		"*.{css,less,scss}": [
-			"stylelint --config .stylelintrc.js"
-		],
-		"*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
-			"prettier --write"
 		]
 	}
 }
