@@ -1,9 +1,20 @@
 import { Avatar, Dropdown, Menu, Modal } from 'antd'
-import React from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import ProfileInfoModal from './components/profileInfo'
+import PasswordModal from './components/passwordModify'
+import type { MenuProps } from 'antd'
+
+interface ModalProps {
+	showModal: (params: any) => void
+}
 
 const Profile: React.FC = () => {
 	const navigate = useNavigate()
+	// 控制个人信息弹窗展示
+	const profileInfoRef = useRef<ModalProps>(null)
+	// 控制修改密码的弹窗展示
+	const passRef = useRef<ModalProps>(null)
 
 	// 退出登录
 	const onHandleLogout = () => {
@@ -20,7 +31,8 @@ const Profile: React.FC = () => {
 			},
 		})
 	}
-	const menu = (
+
+	const MENU = (
 		<Menu
 			items={[
 				{
@@ -31,12 +43,13 @@ const Profile: React.FC = () => {
 				{
 					key: '2',
 					label: <span className="dropdown-item">个人信息</span>,
-					// onClick: () => infoRef.current!.showModal({ name: 11 }),
+					onClick: () =>
+						profileInfoRef.current!.showModal({ name: 11 }),
 				},
 				{
 					key: '3',
 					label: <span className="dropdown-item">修改密码</span>,
-					// onClick: () => passRef.current!.showModal({ name: 11 }),
+					onClick: () => passRef.current!.showModal({ name: 11 }),
 				},
 				{
 					type: 'divider',
@@ -52,13 +65,16 @@ const Profile: React.FC = () => {
 	return (
 		<main>
 			<Dropdown
-				overlay={menu}
+				overlay={MENU}
 				placement="bottom"
 				arrow
 				trigger={['click']}
 			>
 				<Avatar size="large" src={''} />
 			</Dropdown>
+
+			<ProfileInfoModal profileInfoRef={profileInfoRef} />
+			<PasswordModal passRef={passRef} />
 		</main>
 	)
 }

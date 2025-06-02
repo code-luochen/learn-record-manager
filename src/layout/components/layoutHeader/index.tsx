@@ -23,9 +23,7 @@ const LayoutHeader: React.FC = () => {
 					:	<MenuFoldOutlined />}
 				</section>
 			</section>
-			<section>
-				<Profile />
-			</section>
+			<Profile />
 		</Header>
 	)
 }

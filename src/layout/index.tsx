@@ -26,7 +26,7 @@ const LayoutIndex: React.FC = () => {
 				<Layout>
 					<LayoutHeader />
 					<Content className={styles.content}>
-						<Card>
+						<Card className={styles.card}>
 							<Outlet />
 						</Card>
 					</Content>

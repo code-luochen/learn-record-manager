@@ -3,4 +3,5 @@ export interface IAppState {
 	collapsed: boolean
 	theme: 'dark' | 'light'
 	themeColor: string
+	avatar?: string
 }

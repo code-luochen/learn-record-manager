@@ -1,0 +1,149 @@
+.container {
+	.dataVisualize {
+		.title {
+			font-family: PingFang SC;
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		.item {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+			.left {
+				width: 22%;
+				padding: 40px 0 120px 30px;
+				overflow: hidden;
+				color: #ffffff;
+				background: url('./images/book-bg.png');
+				background-size: 100% 100%;
+				border-radius: 20px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				.left_title {
+					font-family: 'PingFang SC';
+					font-size: 20px;
+					font-weight: 500;
+				}
+				.img_box {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 90px;
+					height: 90px;
+					margin: 40px 0 20px;
+					background: #ffffff;
+					background-color: #ffffff;
+					border-radius: 20px;
+					box-shadow: 0 10px 20px rgb(0 0 0 / 14%);
+					img {
+						width: 60px;
+						height: 65px;
+					}
+				}
+				.left_number {
+					overflow: hidden;
+					font-family: DIN;
+					font-size: 62px;
+					font-weight: 500;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+
+			.middle {
+				display: flex;
+				flex: 1;
+				flex-wrap: wrap;
+				align-content: space-between;
+				justify-content: space-between;
+				min-width: 250px;
+				padding: 0 50px;
+				.traffic_box {
+					box-sizing: border-box;
+					display: flex;
+					flex-direction: column;
+					width: 47%;
+					height: 48%;
+					padding: 25px;
+					border-radius: 30px;
+					.traffic_img {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 70px;
+						height: 70px;
+						margin-bottom: 10px;
+						background-color: #ffffff;
+						border-radius: 19px;
+					}
+				}
+			}
+
+			.right {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				width: 40%;
+				height: 430px;
+				border: 1px solid #e5e7eb;
+				border-radius: 25px;
+
+				.echarts_title {
+					padding: 15px 20px;
+					font-family: 'PingFang SC';
+					font-size: 18px;
+					font-weight: 600;
+					border-bottom: 1px solid #e5e7eb;
+				}
+				.book_echarts {
+					flex: 1;
+					width: 100%;
+				}
+			}
+
+			img {
+				width: 33px;
+				height: 33px;
+			}
+			.item_value {
+				margin-bottom: 4px;
+				font-family: DIN;
+				font-size: 28px;
+				font-weight: bold;
+				color: #1a1a37;
+			}
+			.traffic_name {
+				overflow: hidden;
+				font-family: DIN;
+				font-size: 15px;
+				font-weight: 400;
+				color: #1a1a37;
+				white-space: nowrap;
+			}
+
+			.traffic_1 {
+				background: url('./images/1-bg.png');
+				background-color: #e8faea;
+				background-size: 100% 100%;
+			}
+			.traffic_2 {
+				background: url('./images/2-bg.png');
+				background-color: #e7e1fb;
+				background-size: 100% 100%;
+			}
+			.traffic_3 {
+				background: url('./images/3-bg.png');
+				background-color: #fdf3e9;
+				background-size: 100% 100%;
+			}
+			.traffic_4 {
+				background: url('./images/4-bg.png');
+				background-color: #f0f5fb;
+				background-size: 100% 100%;
+			}
+		}
+	}
+}
