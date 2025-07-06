@@ -1,4 +1,4 @@
-// import LoginForm from './components/LoginForm'
+import LoginForm from './components/LoginForm'
 // import SwitchDark from '@/components/SwitchDark'
 import loginLeft from '@/assets/images/login_left.png'
 import logo from '@/assets/images/logo.png'
@@ -15,9 +15,9 @@ const Login = () => {
 				<div className="login-form">
 					<div className="login-logo">
 						<img className="login-icon" src={logo} alt="logo" />
-						<span className="logo-text">Hooks-Admin</span>
+						<span className="logo-text">Learn Record</span>
 					</div>
-					{/* <LoginForm /> */}
+					<LoginForm />
 				</div>
 			</div>
 		</div>

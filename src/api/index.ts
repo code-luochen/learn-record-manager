@@ -1,8 +1,9 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
 import { ResultData } from './interface'
+import { appStore } from '@/store'
 
 const config = {
-	baseURL: 'http://localhost:3309',
+	baseURL: 'http://localhost:3001',
 	// 设置超时时间（10s）
 	timeout: 10000,
 	// 跨域时候允许携带凭证
@@ -18,9 +19,13 @@ class RequestHttp {
 		this.service.interceptors.request.use(
 			(config: any) => {
 				// 自定义header，可添加项目token
+
+				const token = appStore.getState().token
 				config.headers = {
 					...config.headers,
+					Authorization: `Bearer ${token}`,
 				}
+
 				return config
 			},
 			(error: AxiosError) => {

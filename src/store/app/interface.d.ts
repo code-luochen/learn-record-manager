@@ -4,4 +4,5 @@ export interface IAppState {
 	theme: 'dark' | 'light'
 	themeColor: string
 	avatar?: string
+	user?: Record<string, any>
 }

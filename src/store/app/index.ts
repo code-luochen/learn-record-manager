@@ -13,6 +13,7 @@ class AppStore {
 		collapsed: false,
 		theme: 'dark',
 		themeColor: '#1890ff',
+		user: {},
 	}
 
 	// 更新初始化数据
@@ -22,6 +23,8 @@ class AppStore {
 			...data,
 		}
 	}
+
+	getState = () => this.initState
 }
 
 const appStore = new AppStore()

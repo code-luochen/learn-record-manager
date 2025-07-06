@@ -1,5 +1,6 @@
 import { Navigate, useRoutes } from 'react-router-dom'
 import { IRouterObject } from './interface.d'
+import Login from '@/views/login'
 
 // 导入所有的路由模块
 const metaRouters: any = import.meta.glob('./modules/*.tsx', { eager: true })
@@ -13,16 +14,16 @@ Object.keys(metaRouters).forEach(item => {
 	})
 })
 
-const routers = [
+export const routers: IRouterObject[] = [
 	{
 		path: '/',
 		element: <Navigate to="/home" />,
 	},
 	{
 		path: '/login',
-		// element: <Login />,
+		element: <Login />,
 		meta: {
-			requiresAuth: false,
+			noAuth: true,
 			title: '登录页',
 			key: 'login',
 		},
